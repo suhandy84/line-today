@@ -5,8 +5,18 @@ import { MDBCarousel, MDBCarouselCaption, MDBCarouselInner, MDBCarouselItem, MDB
 import { connect } from 'react-redux'
 import { IniHome, BukanHome } from './../redux/actions'
 import Axios from 'axios'
-import {Link} from 'react-router-dom';
+import {API_URL} from './../supports/API_URL'
+import { Link } from 'react-router-dom';
 
+// const instance = Axios.create({
+//     baseURL: "https://today.line.me/id/portaljson",
+//     withCredentials: false,
+//     headers: {
+//       'Access-Control-Allow-Origin' : '*',
+//       'Access-Control-Allow-Methods':'GET,PUT,POST,DELETE,PATCH,OPTIONS',
+//       }
+//   });
+var BASE_URL = process.env.REACT_APP_BASE_URL;
 
 class Home extends Component {
     state = {
@@ -26,8 +36,19 @@ class Home extends Component {
         this.props.BukanHome()
     }
 
+    // instance = Axios.create({
+    //     baseURL: "https://today.line.me/id/portaljson",
+    //     withCredentials: false,
+    //     headers: {
+    //       'Access-Control-Allow-Origin' : '*',
+    //       'Access-Control-Allow-Methods':'GET,PUT,POST,DELETE,PATCH,OPTIONS',
+    //       }
+    //   });
+
+
     componentDidMount() {
-        Axios.get('https://today.line.me/id/portaljson')
+        Axios.get(API_URL)
+        // .then((response) => response.json())
             .then((res) => {
                 // console.log(res.data.result.categories)
                 console.log(res.data.result.categories[0].templates)
@@ -49,6 +70,8 @@ class Home extends Component {
                 console.log(err)
             })
     }
+
+
 
     rendertitle = (x, y) => {
         var title = this.state.top.slice(x, y)

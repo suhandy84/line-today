@@ -8,9 +8,24 @@ import Showbiz from './pages/showbiz'
 import Covid19 from './pages/covid-19'
 import News from './pages/news'
 import Life from './pages/life'
-import Regional from './pages/regional';
+// import Regional from './pages/regional';
 import Sports from './pages/sports';
 
+// var express = require('express')
+// var cors = require('cors')
+// var app = express()
+
+// app.use(cors())
+
+// var corsMiddleware = function(req, res, next) {
+//   res.header('Access-Control-Allow-Origin', 'localhost'); //replace localhost with actual host
+//   res.header('Access-Control-Allow-Methods', 'OPTIONS, GET, PUT, PATCH, POST, DELETE');
+//   res.header('Access-Control-Allow-Headers', 'Content-Type, X-Requested-With, Authorization');
+
+//   next();
+// }
+
+// app.use(corsMiddleware);
 
 function App() {
   return (
@@ -23,7 +38,7 @@ function App() {
           <Route path='/Showbiz' exact component={Showbiz} />
           <Route path='/News' exact component={News} />
           <Route path='/Life' exact component={Life} />
-          <Route path='/Regional' exact component={Regional} />
+          {/* <Route path='/Regional' exact component={Regional} /> */}
           <Route path='/Corona di RI' exact component={Covid19} />
           <Route path='/Sports' exact component={Sports} />
           {/* <Route path='/login' exact component={Login} />

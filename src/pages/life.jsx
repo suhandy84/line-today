@@ -3,7 +3,7 @@ import { MDBBtn, MDBBtnGroup, MDBDropdown, MDBDropdownToggle, MDBDropdownMenu, M
 import { MDBCarousel, MDBCarouselCaption, MDBCarouselInner, MDBCarouselItem, MDBView, MDBMask, MDBContainer } from
     "mdbreact";
 import Axios from 'axios'
-import { API_URL } from '../supports/ApiUrl'
+// import { API_URL } from '../supports/ApiUrl'
 
 class News extends Component {
     state = { 

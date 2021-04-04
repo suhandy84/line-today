@@ -4,6 +4,7 @@ import {
   MDBDropdown, MDBDropdownToggle, MDBDropdownMenu, MDBDropdownItem
 } from "mdbreact";
 import { BrowserRouter as Router } from 'react-router-dom';
+import {API_URL} from './../supports/API_URL'
 import Axios from 'axios'
 
 
@@ -15,7 +16,7 @@ class NavbarPage extends Component {
   };
 
   componentDidMount() {
-    Axios.get('https://today.line.me/id/portaljson')
+    Axios.get(API_URL)
       .then((res) => {
         console.log(res.data.result.categories)
         // console.log(res.data.result.categories[0].templates)

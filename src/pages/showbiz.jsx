@@ -3,6 +3,7 @@ import { MDBCarousel, MDBCarouselCaption, MDBCarouselInner, MDBCarouselItem, MDB
     "mdbreact";
 import Axios from 'axios'
 import { BrowserRouter as Router, Link } from 'react-router-dom';
+import {API_URL} from './../supports/API_URL'
 
 
 class Showbiz extends Component {
@@ -21,7 +22,7 @@ class Showbiz extends Component {
 
 
     componentDidMount() {
-        Axios.get('https://today.line.me/id/portaljson')
+        Axios.get(API_URL)
             .then((res) => {
                 this.setState({ title: res.data.result.categories[1].templates })
                 var data = res.data.result.categories[1]

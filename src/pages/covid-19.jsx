@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Axios from 'axios'
 import { BrowserRouter as Router, Link } from 'react-router-dom';
+import {API_URL} from './../supports/API_URL'
 
 
 class Covid19 extends Component {
@@ -15,7 +16,7 @@ class Covid19 extends Component {
     }
 
     componentDidMount() {
-        Axios.get('https://today.line.me/id/portaljson')
+        Axios.get(API_URL)
             .then((res) => {
                 this.setState({ title: res.data.result.categories[16].templates })
                 var data = res.data.result.categories[16]

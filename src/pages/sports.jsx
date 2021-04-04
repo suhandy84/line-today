@@ -4,6 +4,7 @@ import { MDBCarousel, MDBCarouselCaption, MDBCarouselInner, MDBCarouselItem, MDB
 import { MDBBtn, MDBBtnGroup, MDBDropdown, MDBDropdownToggle, MDBDropdownMenu, MDBDropdownItem, MDBNavLink } from "mdbreact";
 import Axios from 'axios'
 import { BrowserRouter as Router, Link } from 'react-router-dom';
+import {API_URL} from './../supports/API_URL'
 
 
 class Sports extends Component {
@@ -17,7 +18,7 @@ class Sports extends Component {
 
 
     componentDidMount() {
-        Axios.get('https://today.line.me/id/portaljson')
+        Axios.get(API_URL)
             .then((res) => {
                 this.setState({ title: res.data.result.categories[9].templates })
                 console.log(this.state.title)

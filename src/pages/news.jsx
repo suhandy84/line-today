@@ -2,8 +2,8 @@ import React, {Component} from "react";
 import { MDBBtn, MDBBtnGroup, MDBDropdown, MDBDropdownToggle, MDBDropdownMenu, MDBDropdownItem } from "mdbreact";
 import { MDBCarousel, MDBCarouselCaption, MDBCarouselInner, MDBCarouselItem, MDBView, MDBMask, MDBContainer } from
     "mdbreact";
+import {API_URL} from './../supports/API_URL'
 import Axios from 'axios'
-import { API_URL } from '../supports/ApiUrl'
 
 class News extends Component {
     state = { 
