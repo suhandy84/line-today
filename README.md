@@ -1,4 +1,4 @@
-#
+# OPTIONAL
 1. Use Chrome browser
 2. Install allow CORS chrome addon here : https://chrome.google.com/webstore/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf?hl=en
 
